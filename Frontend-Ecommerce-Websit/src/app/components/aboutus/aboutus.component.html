@@ -1,0 +1,25 @@
+<ng-container *ngIf="!isEditing; else Header">
+  <app-header-user></app-header-user>
+</ng-container>
+
+<ng-template #Header>
+  <app-header></app-header>
+</ng-template>
+<section class="a-propos">
+  <div class="container">
+    <h2 style="color: #ff9500; font-family: 'Arial Black', sans-serif;">À propos de nous</h2>
+    <br>
+<div *ngFor="let about of aboutusList">
+
+  <p><i>{{ about.aboutus }}</i></p><br>
+</div>
+</div>
+</section>
+<ng-container *ngIf="!isEditing; else footer">
+  <app-footer-user></app-footer-user>
+</ng-container>
+
+<ng-template #footer>
+  <app-footer></app-footer>
+</ng-template>
+

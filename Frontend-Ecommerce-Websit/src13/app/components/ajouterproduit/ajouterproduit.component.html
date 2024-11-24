@@ -1,0 +1,175 @@
+<app-header-user></app-header-user><br>
+<br>
+<br>
+<!--
+<div class="container">
+    <p class="alert alert-info">
+        Vous avez choisi votre produit avec soin et nous sommes ravis de vous
+        offrir une opportunité de le mettre en avant.<strong> En ajoutant votre produit
+        sur nos pages Facebook et en le plaçant en tête de notre interface,</strong>
+         nous vous offrons une visibilité exceptionnelle. De plus, nous avons
+         des spécialistes dédiés à la promotion et à la protection de votre produit.
+        <br>
+        <br>
+        Pour plus d'informations sur nos offres de<strong>sponsoring</strong>  à un prix incroyable,
+         contactez-nous au <strong>50541056</strong>. Ne manquez pas cette occasion de
+          faire briller votre produit.
+        <br>
+        <br>
+        Merci pour votre attention, et nous vous souhaitons de nombreuses opportunités
+        et ventes fructueuses avec <strong><i>MY-SHOP</i></strong>
+    </p>
+</div>
+
+<div class="add-product-form">
+    <h2>Ajouter un Produit</h2>
+    <form #addForm="ngForm" (ngSubmit)="onAddProduit(addForm)" class="rounded p-4 shadow">
+        <label for="title">Titre du Produit :</label>
+        <input type="text" ngModel id="title" name="titre" required>
+
+        <label for="description">Description :</label>
+        <textarea id="description" ngModel name="description" rows="4" required></textarea>
+
+        <label for="photo">URL de la Photo :</label>
+        <input type="url" id="photo" ngModel name="photo" required>
+
+        <label for="category">Catégorie :</label>
+        <select id="category" ngModel name="nomcateg" required>
+            <option value="voitures">Voitures</option>
+            <option value="electronic">electronic</option>
+            <option value="materiel">Matériel</option>
+        </select>
+        <label for="prix">Prix du Produit :</label>
+        <input type="text" ngModel id="prix" name="prix" required>
+        <label for="phoneprod">Numéro de Téléphone :</label>
+        <input type="tel" id="phoneprod" name="phoneprod" ngModel required>
+
+        <label for="sponsored">Sponsorisé :</label>
+        <div>
+            <input type="radio" id="sponsored-oui" ngModel name="sponsored" value="OUI" required>
+            <label for="sponsored-oui">OUI</label>
+
+            <input type="radio" id="sponsored-non" ngModel name="sponsored" value="NON" required>
+            <label for="sponsored-non">NON</label>
+        </div>
+        <button type="submit">Ajouter</button>
+    </form>
+</div>
+
+-->
+
+<div class="container">
+    <p class="alert alert-info">
+        Vous avez choisi votre produit avec soin et nous sommes ravis de vous
+        offrir une opportunité de le mettre en avant.<strong> En ajoutant votre produit
+        sur nos pages Facebook et en le plaçant en tête de notre interface,</strong>
+         nous vous offrons une visibilité exceptionnelle. De plus, nous avons
+         des spécialistes dédiés à la promotion et à la protection de votre produit.
+        <br>
+        <br>
+        Pour plus d'informations sur nos offres de<strong>sponsoring</strong>  à un prix incroyable,
+         contactez-nous au <strong>50541056</strong>. Ne manquez pas cette occasion de
+          faire briller votre produit.
+        <br>
+        <br>
+        Merci pour votre attention, et nous vous souhaitons de nombreuses opportunités
+        et ventes fructueuses avec <strong><i>MY-SHOP</i></strong>
+    </p>
+</div><br>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../styles.css">
+
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="wrapper">
+          <div class="row no-gutters">
+            <div class="col-md-7">
+              <div class="contact-wrap w-100 p-md-5 p-4 rounded shadow">
+                <h3 class="mb-4">Ajouter un Produit</h3>
+                <form #addForm="ngForm" (ngSubmit)="onAddProduit(addForm)" class="contactForm">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="titre">Nom du Produit :</label>
+                        <input type="text" ngModel id="titre" name="titre" class="form-control" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="prix">Prix du Produit :</label>
+                        <input type="text" ngModel id="prix" name="prix" class="form-control" required>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="nomcateg">Catégorie :</label>
+                        <select id="nomcateg" ngModel name="nomcateg" class="form-control" required>
+                          <option value="Électronique">Électronique</option>
+                          <option value="Véhicule">Véhicule</option>
+                          <option value="Vêtement">Vêtement</option>
+                          <option value="Cosmétique">Cosmétique</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="phoneprod">Téléphone :</label>
+                        <input type="text" ngModel id="phoneprod" name="phoneprod" class="form-control" required>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="description">Déscription du Produit :</label>
+                        <textarea id="description" ngModel name="description" rows="4" class="form-control" required></textarea>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="photo">Image du Produit :</label>
+                        <input type="file" ngModel id="photo" name="photo" class="form-control-file" accept="image/*" required>
+                      </div>
+                    </div>
+                     <!--
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="photo">Image du Produit :</label>
+                        <input type="text" ngModel id="photo" name="photo" class="form-control-file" required>
+                      </div>
+                    </div>  -->
+
+        <div>
+          <label for="sponsored">Sponsorisé :</label><br>
+            <input type="radio" id="sponsored-oui" ngModel name="sponsored" value="OUI" required>
+            <label for="sponsored-oui">OUI</label>
+
+            <input type="radio" id="sponsored-non" ngModel name="sponsored" value="NON" required>
+            <label for="sponsored-non">NON</label>
+        </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Ajouter le Produit</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-4" style="margin-right: 50px;">
+              <img src="../../../assets/sell2.png" alt="amine" width="550px" height="528px">
+             <!-- <img src="../../../assets/sell3.webp" alt="yasmine" width="550px" height="528px">-->
+              <!--<img src="../../../assets/sell1.jpg" alt="yasmine" width="550px" height="678px">-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><br><br>

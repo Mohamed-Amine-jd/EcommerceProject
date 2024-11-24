@@ -1,0 +1,63 @@
+<app-header-admin></app-header-admin>
+
+    <div *ngIf="isEditing">
+        <div class="container">
+          <div class="center-block">
+          </div>
+          <p style="text-align: center; font-size: 50px; font-family:serif; color: #262626; padding-bottom: 50px;">Administration MY-SHOP</p>
+          <div class="container d-flex justify-content-center">
+            <form class="form-inline my-2 my-lg-0">
+              <input type="search" (ngModelChange)="rechercherProds(key.value)" #key="ngModel" ngModel
+                name="key" id="searchName" style="width: 500px; " class="form-control mr-sm-2"
+                placeholder="Rechercher un produit..." required>
+            </form>
+          </div><br><br>
+          <div class="row">
+          <div *ngFor="let product of sponso" class="col-lg-4 col-sm-4 mb-4">
+            <div class="container">
+              <div class="row">
+                       <div class="box_main">
+                    <h4 class="shirt_text">{{ product.titre }}</h4>
+                    <p class="price_text">Start Price  <span style="color: #262626;">{{ product.prix }} D</span></p>
+                    <div style="text-align: center;">
+                      <img src="../../../assets/star2.webp" style="height: 30px; width: 30px;">
+                      <img src="../../../assets/star2.webp" style="height: 30px; width: 30px;">
+                      <img src="../../../assets/star2.webp" style="height: 30px; width: 30px;">
+                      <img src="../../../assets/star2.webp" style="height: 30px; width: 30px;">
+                      <img src="../../../assets/star2.webp" style="height: 30px; width: 30px;">
+                    </div>
+                    <div class="electronic_img">
+                      <img [src]="prendrenomFile(product.photo)" alt="{{ product.titre }}" style="height: 200px; width:250px;">
+                    </div>
+                    <div class="btn_main">
+                      <div class="seemore_bt">
+                        <div class="seemore_bt"><button class="btn btn-danger btn-lg" (click)="Delete(product.id)">Supprimer</button></div>
+                    </div>
+                    </div>
+                  </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      <br><br>
+   
+    <div id="bas"></div>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let product of filteredProduits" class="col-lg-4 col-sm-4 mb-4">
+                <div class="box_main">
+                    <h4 class="shirt_text">{{ product.titre }}</h4>
+                    <p class="price_text">Prix  <span style="color: #262626;">{{ product.prix }} D</span></p>
+                    <div class="electronic_img"><img [src]="prendrenomFile(product.photo)" alt="{{ product.titre }}"
+                      style="height: 200px; width:250px;"></div>
+                    <div class="btn_main">
+                        <div class="seemore_bt"><button class="btn btn-danger btn-lg" (click)="Delete(product.id)">Supprimer</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

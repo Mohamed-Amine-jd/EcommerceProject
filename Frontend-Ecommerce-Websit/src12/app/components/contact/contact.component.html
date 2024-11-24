@@ -1,0 +1,29 @@
+<app-header-admin></app-header-admin>
+<div class="container">
+    <div class="table-container"> <!-- Ajout d'un conteneur pour centrer le tableau -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Téléphone</th>
+                    <th>Message</th>
+                    <th>Action</th>
+                    <!-- Vous pouvez ajouter d'autres colonnes en fonction de vos besoins -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let contact of contacts">
+                    <td>{{ contact.nom }}</td>
+                    <td>{{ contact.prenom }}</td>
+                    <td>{{ contact.phone }}</td>
+                    <td>{{ contact.message }}</td>
+                    <!-- Ajoutez d'autres colonnes en fonction de vos besoins -->
+                    <td>
+                        <button (click)="supprimerMessage(contact)">Supprimer</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+/* Couleur faible pour le bouton désactivé */
+.couleurFaible {
+  color: #999; /* Couleur de texte faible */
+  background-color: #eee; /* Couleur de fond faible */
+}
+
+/* Couleur rouge pour le bouton activé */
+.couleurRouge {
+  color: #fff; /* Couleur de texte rouge */
+  background-color: #ff0000; /* Couleur de fond rouge */
+}
+
+.container {
+  margin-left: auto; /* Décaler le tableau vers la droite */
+  margin-right: auto; /* Assurer que le tableau reste centré horizontalement */
+  width: 70%; /* Ajuster la largeur du conteneur selon vos préférences */
+}
+
+  h2 {
+    text-align: center;
+    color: #333333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    color: #555555;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #f26522;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e17340;
+  }
+
+  .colonneRouge {
+    background-color: #e17340;
+    ; /* ou toute autre couleur de fond de votre choix */
+    color: white; /* pour assurer la lisibilité du texte sur fond rouge */
+}

@@ -1,0 +1,59 @@
+
+
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+
+
+/* Styles pour la carte */
+.box_main {
+  width: 85%;
+  background-color: #ffffff;
+  height: auto;
+  padding: 20px;
+  box-shadow: 0px 0 30px 10px #f0f0f0;
+  margin-bottom: 20px;
+}
+.container {
+    margin-right: 14px; 
+  }
+  
+.shirt_text {
+  width: 100%;
+  font-size: 20px;
+  color: #30302e;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.price_text {
+  width: 100%;
+  font-size: 16px;
+  color: #f26522;
+  text-align: center;
+  margin: 0px;
+}
+
+.electronic_img {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0px;
+  min-height: 293px;
+}
+
+.btn_main {
+  width: 100%;
+  display: flex;
+}
+
+.seemore_bt {
+  width: 100%;
+  float: right;
+  text-align: center;
+}

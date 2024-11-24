@@ -1,0 +1,20 @@
+<app-header-admin></app-header-admin>
+
+<section class="a-propos">
+  <div class="container">
+    <h2>À propos de nous</h2>
+    <div *ngFor="let about of aboutusList">
+      <i>{{ about.aboutus }}</i><br><br><br>
+      <button (click)="onEditClick(about)" class="button">Modifier</button>
+    </div>
+  </div>
+</section>
+
+<div *ngIf="isEditing" class="form-container">
+  <form [formGroup]="editAboutusForm" (ngSubmit)="onEditAboutus()" class="rounded p-4 shadow form-group text-center">
+    <label for="aboutus">Modifier votre À propos de nous</label>
+    <textarea id="aboutus" formControlName="aboutus" class="form-control" rows="8"></textarea>
+    <button type="button" class="btn btn-danger" (click)="onCancelEdit()">Annuler</button>
+    <button type="submit" class="btn btn-success">Enregistrer</button>
+  </form>
+</div>

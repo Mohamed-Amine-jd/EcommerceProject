@@ -1,0 +1,42 @@
+<!-- Ajoutez ce lien dans la section <head> de votre fichier index.html pour inclure Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+  <app-header *ngIf="connect === 0"></app-header>
+  <app-header-user *ngIf="connect !== 0"></app-header-user>
+  
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <img [src]="getFileName(produit.photo)" [alt]="produit.titre" class="img-fluid produit-image ">
+      </div>
+      <div class="col-md-6 produit-info">
+        <h2 class="produit-titre">{{ produit.titre }}</h2>
+        
+        <div class="info-label">
+          <i  class="fa fa-dollar"></i> Prix
+        </div>
+        <p>{{ produit.prix }} D</p>
+        
+        <div class="info-label">
+          <i class="fa fa-phone"></i> Téléphone
+        </div>
+        <p>{{ produit.phoneprod }}</p>
+        
+        <div class="info-label">
+          <i class="fa fa-info-circle "></i> Déscription
+        </div>
+        <p>{{ produit.description }}</p>
+        
+        <div class="info-label">
+          <i class="fa fa-tags "></i> Catégorie
+        </div>
+        <p>{{ produit.nomcateg }}</p>
+        
+        <button class="btn btn-danger mt-3" (click)="signalerProduit(produit.id)" [disabled]="connect === 0">
+          Signaler
+        </button>
+      </div>
+    </div>
+  </div>
+  <br><br>

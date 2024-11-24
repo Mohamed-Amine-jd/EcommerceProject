@@ -1,0 +1,31 @@
+<app-header-admin></app-header-admin><br><br>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Téléphone</th>
+        <th>Adresse</th>
+        <th>Mot de passe</th>
+        <th>Rôle</th>
+        <th>minus</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users"  >
+        <td [class.colonneRouge]="user.minus >= 3">{{ user.nom }}</td>
+        <td [class.colonneRouge]="user.minus >= 3">{{ user.prenom }}</td>
+        <td [class.colonneRouge]="user.minus >= 3">{{ user.phone }}</td>
+        <td [class.colonneRouge]="user.minus >= 3">{{ user.adresse }}</td>
+        <td [class.colonneRouge]="user.minus >= 3">{{ user.md }}</td>
+        <td [class.colonneRouge]="user.minus >= 3">{{ user.role }}</td>
+        <td [class.colonneRouge]="user.minus >= 3">{{ user.minus }}</td>
+        <td>
+          <button (click)="supprimerUtilisateur(user)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

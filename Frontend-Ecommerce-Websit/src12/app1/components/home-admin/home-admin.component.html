@@ -1,0 +1,144 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Ajoutez ici vos styles CSS personnalisés si nécessaire -->
+</head>
+
+
+
+    <div class="banner_bg_main">
+        <div class="container">
+            <div class="header_section_top">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="custom_menu">
+
+                            <ul>
+                                <li><a routerLink="/homeadmin">Accueil</a></li>
+                                <li><a routerLink="/editabout">Éditer À Propos</a></li>
+                                <li><a routerLink="/user">Consulter Utilisateurs</a></li>
+                                <li><a routerLink="/contact">Consulter les Messages</a></li>
+                                <li><a routerLink="/produitsponso">Consulter Sponsorisés</a></li>
+                                <li>
+                                    <a (click)="logOut()" routerLink="">Déconnexion</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="logo"><img src="../../../assets/logo.png" alt="hethy" width="100px" height="60px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_section">
+            <div class="container">
+                <div class="containt_main">
+                    <li class="dropdown"><a href="#"><span>Les Catégories</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a (click)="searchCategory('Électronique')">Électronique</a></li>
+                            <li><a (click)="searchCategory('Véhicule')">Véhicule</a></li>
+                            <li><a (click)="searchCategory('Vêtement')">Vêtement</a></li>
+                            <li><a (click)="searchCategory('Cosmétique')">Cosmétique</a></li>
+                            <li><a (click)="showAllProducts()">Tous les Produits</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="main">
+                        <div class="input-group">
+                            <form class="form-inline my-2 my-lg-0">
+                                <input type="search" (ngModelChange)="searchProduits(key.value)" #key="ngModel"
+                                    ngModel name="key" id="searchName" style="width: 663px; "
+                                    class="form-control mr-sm-2" placeholder="Rechercher un produit..." required>
+                            </form>
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button"
+                                    style="background-color: #f26522; border-color:#f26522 ;width: 30px;">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <a routerLink="/ajouterproduit">Ajouter un Produit</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 " style="padding-bottom: 170px;">
+                        <h1 class="banner_taital">Commencez <br>Élevez vos achats </h1>
+                        <div class="buynow_bt"><a href="">Voir Plus</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isEditing">
+        <div class="container">
+          <p style="text-align: center; font-size: 50px; font-family:serif; color: #262626; padding-bottom: 50px;">Consulter Nos Meilleurs Produits</p>
+          <div class="row">
+          <div *ngFor="let product of sponso; let i = index" class="carousel-item" [class.active]="i === activeIndex">
+            <div class="container">
+              <div class="row">
+                <div *ngFor="let product of sponso.slice(i * 3, (i + 1) * 3)" class="col-lg-4 col-sm-4 mb-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">{{ product.titre }}</h4>
+                    <p class="price_text">Start Price  <span style="color: #262626;">{{ product.prix }} D</span></p>
+                    <div style="text-align: center;">
+                      <img src="../../../assets/star2.webp" style="height: 30px; width: 30px;">
+                      <img src="../../../assets/star2.webp" style="height: 30px; width: 30px;">
+                      <img src="../../../assets/star2.webp" style="height: 30px; width: 30px;">
+                      <img src="../../../assets/star2.webp" style="height: 30px; width: 30px;">
+                      <img src="../../../assets/star2.webp" style="height: 30px; width: 30px;">
+                    </div>
+                    <div class="electronic_img">
+                      <img [src]="getFileName(product.photo)" alt="{{ product.titre }}" style="height: 250px; width: 300px;">
+                    </div>
+                    <div class="btn_main">
+                      <div class="seemore_bt">
+                        <div class="seemore_bt"><button class="btn btn-danger btn-lg" (click)="Delete(product.id)">Supprimer</button></div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div style="text-align: center; padding-bottom: 70px;">
+        <img src="../../../assets/previousSlide.png" (click)="prevSlide()" style="text-align: left; width: 100px;  padding-right: 50px;">
+        <img src="../../../assets/nextSlide.png" (click)="nextSlide()" style="text-align: right; width: 100px;  padding-left: 50px;">
+      </div>
+      </div>
+      <br><br>
+    <!-- Liste de produits filtrés -->
+    <div id="bas"></div>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let product of filteredProduits" class="col-lg-4 col-sm-4 mb-4">
+                <div class="box_main">
+                    <h4 class="shirt_text">{{ product.titre }}</h4>
+                    <p class="price_text">Prix  <span style="color: #262626;">{{ product.prix }} D</span></p>
+                    <div class="electronic_img"><img [src]="getFileName(product.photo)" alt="{{ product.titre }}"
+                        style="height: 250px; width: 300px;"></div>
+                    <div class="btn_main">
+                        <div class="seemore_bt"><button class="btn btn-danger btn-lg" (click)="Delete(product.id)">Supprimer</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<app-footer-admin></app-footer-admin>

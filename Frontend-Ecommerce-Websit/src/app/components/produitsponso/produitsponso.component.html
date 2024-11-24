@@ -1,0 +1,50 @@
+
+<app-header-admin></app-header-admin>
+
+<div class="container">
+    <h2 style="color: #0066FF; font-family: 'Arial Black', sans-serif;">Produits à sponsoriser</h2>
+    <table class="table table-striped table-container " >
+        <thead class="thead-dark">
+            <tr>
+                <th style="color: #8f5c10;">Titre</th>
+                <th style="color: #8f5c10;">Description</th>
+                <th style="color: #8f5c10;">Prix</th>
+                <th style="color: #8f5c10;">Nom Catégorie</th>
+                <th style="color: #8f5c10;">Sponsorisé</th>
+                <th style="color: #8f5c10;">Téléphone</th>
+                <th style="color: #8f5c10;">Image</th>
+                <th style="color: #8f5c10;">Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="produits.length === 0">
+                <tr>
+                    <td colspan="8">
+                        <p style="color: red;">Il n'y a aucun produit à accepter.
+                        </p>
+                    </td>
+                    
+                </tr>
+            </ng-container>
+            <tr *ngFor="let produit of produits">
+               
+                <td class="ttdd">{{ produit.titre }}</td>
+                <td class="ttdd">{{ produit.description }}</td>
+                <td class="ttdd">{{ produit.prix }}</td>
+                <td class="ttdd">{{ produit.nomcateg }}</td>
+                <td class="ttdd">{{ produit.sponso }}</td>
+                <td class="ttdd">{{ produit.phoneprod }}</td>
+                <td>
+                    <img [src]="prendrenomFile(produit.photo)" alt="Product Image" style="max-width: 100px; max-height: 100px;">
+                </td>
+
+                <td>
+                    <button class="btn btn-danger" style="padding-left: 14px; margin-right: 10px;" (click)="EffacherProd(produit.id)">Delete</button>
+                    <button class="btn btn-success" style="padding-right: 14px;" (click)="AjouterAsponsoriser(produit)">Ajouter</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,115 @@
+/*body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+  }
+  
+  .add-product-form {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-product-form h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .add-product-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-product-form label,
+  .add-product-form input,
+  .add-product-form textarea,
+  .add-product-form select,
+  .add-product-form button {
+    margin-bottom: 15px;
+  }
+  
+  .add-product-form label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .add-product-form input,
+  .add-product-form textarea,
+  .add-product-form select,
+  .add-product-form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .add-product-form button {
+    background-color: #f26522;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .add-product-form button:hover {
+    background-color: #d45d1a;
+  }*/
+
+  body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+  }
+  
+  .add-product-form {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-product-form h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .add-product-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-product-form label,
+  .add-product-form input,
+  .add-product-form textarea,
+  .add-product-form select,
+  .add-product-form button {
+    margin-bottom: 15px;
+  }
+  
+  .add-product-form label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .add-product-form input,
+  .add-product-form textarea,
+  .add-product-form select,
+  .add-product-form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .add-product-form button {
+    background-color: #f26522;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .add-product-form button:hover {
+    background-color: #d45d1a;
+  }
+
+  

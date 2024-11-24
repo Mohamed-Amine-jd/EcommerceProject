@@ -1,0 +1,109 @@
+<app-header-user></app-header-user>
+<br><br>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../styles.css">
+
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="wrapper">
+          <div class="row mb-5">
+            <div class="col-md-3">
+              <div class="dbox w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="fa fa-map-marker"></span>
+                </div>
+                <div class="text">
+                  <p><span>Addresse:</span> tunis</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dbox w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="fa fa-phone"></span>
+                </div>
+                <div class="text">
+                  <p><span>Numéro de téléphone:</span> <a href="tel://1234567920">+ 50541056</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dbox w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="fa fa-paper-plane"></span>
+                </div>
+                <div class="text">
+                  <p><span>Email:</span> <a href="mailto:info@yoursite.com">Myshop@gmail.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dbox w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="fa fa-globe"></span>
+                </div>
+                <div class="text">
+                  <p><span>Site Web</span> <a href="https://www.facebook.com/profile.php?id=61556163116177">Myshop</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-md-7">
+                <div class="contact-wrap w-100 p-md-5 p-4 rounded shadow">
+                  <h3 style="color: #ff9500; font-family: 'Arial Black', sans-serif;">Contacter nous</h3>
+                    <form #contactForm="ngForm" (ngSubmit)="AjouterMessage(contactForm)">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nom">Nom :</label>
+                                    <input type="text" ngModel id="nom" name="nom" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="prenom">Prénom :</label>
+                                    <input type="text" ngModel id="prenom" name="prenom" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="phone">Numéro de Téléphone :</label>
+                                    <input type="tel" id="phone" ngModel name="phone" class="form-control" required pattern="[0-9]*">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="message">Message :</label>
+                                    <textarea id="message" ngModel name="message" rows="4" class="form-control" required></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                  <br>
+                                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-5 d-flex align-items-stretch">
+                <div class="info-wrap w-100 p-4 img" style="background-image: url(../../../assets/chariot.jpg) ;">
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><br><br>
+<app-footer-user></app-footer-user>

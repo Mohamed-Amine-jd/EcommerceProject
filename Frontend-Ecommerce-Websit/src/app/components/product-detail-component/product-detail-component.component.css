@@ -1,0 +1,53 @@
+
+
+.produit-info {
+  background-color:#ececec; /* Couleur de fond du bloc produit-info */
+  padding: 20px;
+  border-radius: 10px; /* Bordure arrondie */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.produit-titre {
+  color: #000000;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold; /* Couleur du titre du produit */
+}
+
+.info-label {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #4299e1;
+}
+
+p {
+  font-style: italic; /* Style italic pour tous les paragraphes */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Couleur du bouton Signaler */
+  border-color: #dc3545; /* Couleur de la bordure du bouton Signaler */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Couleur au survol du bouton Signaler */
+  border-color: #bd2130; /* Couleur de la bordure au survol du bouton Signaler */
+}
+
+.produit-image {
+  width: 1850px;
+  height: 520px;
+  border-radius: 10px;
+  position: relative; /* Activer le positionnement relatif */
+  left: -100px; /* Déplacer l'élément vers la gauche de 200 pixels */
+
+}
+td :hover{
+  background-color: rgb(225, 205, 181);
+  border-radius: 10px;
+ 
+}
+
+div{
+  font-size: 23px;
+}

@@ -1,0 +1,21 @@
+.a-propos {
+  background-color: #f4f4f4;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: 150px;
+}
+
+.a-propos h2 {
+  color: #333;
+}
+
+.a-propos p {
+  color: #666;
+  line-height: 1.6;
+}

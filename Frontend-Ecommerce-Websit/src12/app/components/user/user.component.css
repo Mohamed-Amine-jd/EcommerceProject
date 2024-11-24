@@ -1,0 +1,79 @@
+.contact-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    color: #555555;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color:red;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e14040;
+  }
+  .contact-form {
+    width: 50%; /* Vous pouvez ajuster la largeur selon vos préférences */
+    margin: 0 auto; /* Cela centre horizontalement le formulaire */
+    text-align: left; /* Alignement du texte à gauche dans le formulaire */
+  }
+  
+  .contact-form h2 {
+    text-align: center; /* Centrer le titre du formulaire */
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  .table-container {
+    margin: 8% auto; /* Ajout d'une marge au-dessus et en dessous de la table */
+    
+    width: 80%; /* Vous pouvez ajuster la largeur du conteneur */
+  }
+  
+  
+  
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    margin-bottom: 15px; /* Espacement entre les éléments du formulaire */
+  }
+
+  .colonneRouge {
+    background-color: rgb(228, 124, 106);
+    color: white; /* Changer la couleur du texte si nécessaire */
+  }

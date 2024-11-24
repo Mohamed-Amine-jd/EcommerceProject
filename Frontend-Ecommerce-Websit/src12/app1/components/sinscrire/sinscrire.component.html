@@ -1,0 +1,140 @@
+<app-header></app-header>
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h1 class="mb-4 text-center">S'inscrire</h1>
+
+      <form [formGroup]="addForm" (ngSubmit)="onAddUser()" class="rounded p-4 shadow">
+
+
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input formControlName="nom" type="text" class="form-control" id="nom">
+          <small class="text-danger" *ngIf="addForm.get('nom')?.invalid && (addForm.get('nom')?.dirty || addForm.get('nom')?.touched)">
+            <div *ngIf="addForm.get('nom')?.errors?.['required']">Le nom complet est requis</div>
+            <div *ngIf="addForm.get('nom')?.errors?.['pattern']">La première lettre doit être majuscule</div>
+          </small>
+        </div>
+
+
+        <div class="form-group">
+          <label for="prenom">Prénom</label>
+          <input formControlName="prenom" type="text" class="form-control" id="prenom" >
+          <small class="text-danger" *ngIf="addForm.get('prenom')?.invalid && (addForm.get('prenom')?.dirty || addForm.get('prenom')?.touched)">
+            <div *ngIf="addForm.get('prenom')?.errors?.['required']">Le prénom complet est requis</div>
+            <div *ngIf="addForm.get('prenom')?.errors?.['pattern']">La première lettre doit être majuscule</div>
+          </small>
+        </div>
+
+
+        <div class="form-group">
+          <label for="adresse">Adresse</label>
+          <input formControlName="adresse" type="text" class="form-control" id="adresse">
+          <small class="text-danger" *ngIf="addForm.get('adresse')?.invalid && (addForm.get('adresse')?.dirty || addForm.get('adresse')?.touched)">
+            <div *ngIf="addForm.get('adresse')?.errors?.['required']">L'adresse est requise</div>
+          </small>
+        </div>
+
+
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input formControlName="phone" type="text" class="form-control" id="phone" >
+          <small class="text-danger" *ngIf="addForm.get('phone')?.invalid && (addForm.get('phone')?.dirty || addForm.get('phone')?.touched)">
+            <div *ngIf="addForm.get('phone')?.errors?.['required']">Le numéro de téléphone est requis</div>
+            <div *ngIf="addForm.get('phone')?.errors?.['minLength']">Le numéro de téléphone n'est pas valide</div>
+            <div *ngIf="addForm.get('phone')?.errors?.['pattern']">Seuls les chiffres sont autorisés</div>
+          </small>
+        </div>
+
+
+        <div class="form-group">
+          <label for="md">Mot de passe</label>
+          <input formControlName="md" type="password" class="form-control" id="md">
+          <small class="text-danger" *ngIf="addForm.get('md')?.invalid && (addForm.get('md')?.dirty || addForm.get('md')?.touched)">
+            <div *ngIf="addForm.get('md')?.errors?.['required']">Le mot de passe est requis</div>
+          </small>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Soumettre</button>
+        <div class="mt-3">
+          <p class="mb-0 text-center">Vous avez déjà un compte? <a routerLink="/seconnecter" class="fw-bold">Se Connecter</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+-->
+
+
+<div class="page-content" >
+  <div class="form-v6-content" >
+    <div class="form-left">
+      <img src="../../../assets/char1.gif" alt="form" style="height: 99%; width: 500px;">
+    </div>
+    <form [formGroup]="addForm" (ngSubmit)="onAddUser()" class="form-detail">
+      <h2>Register Form</h2>
+      <div class="form-row">
+        <input type="text" formControlName="nom" id="nom" class="input-text" placeholder="Nom">
+        <small class="text-danger inline-error d-block" *ngIf="addForm.get('nom')?.hasError('required') && (addForm.get('nom')?.dirty || addForm.get('nom')?.touched)">
+          Le nom complet est requis
+        </small>
+      </div>
+
+      <div class="form-row">
+        <input type="text" formControlName="prenom" id="prenom" class="input-text" placeholder="Prénom">
+        <small class="text-danger inline-error d-block" *ngIf="addForm.get('prenom')?.hasError('required') && (addForm.get('prenom')?.dirty || addForm.get('prenom')?.touched)">
+          Le prénom complet est requis
+        </small>
+      </div>
+
+      <div class="form-row">
+        <input type="text" formControlName="adresse" id="adresse" class="input-text" placeholder="Addresse">
+        <small class="text-danger inline-error d-block" *ngIf="addForm.get('adresse')?.hasError('required') && (addForm.get('adresse')?.dirty || addForm.get('adresse')?.touched)">
+          L'adresse est requise
+        </small>
+      </div>
+
+      <div class="form-row">
+        <input type="text" formControlName="phone" id="phone" class="input-text" placeholder="Téléphone">
+        <small class="text-danger inline-error d-block" *ngIf="addForm.get('phone')?.hasError('required') && (addForm.get('phone')?.dirty || addForm.get('phone')?.touched)">
+          Le numéro de téléphone est requis
+        </small>
+        <small class="text-danger inline-error d-block" *ngIf="addForm.get('phone')?.hasError('minlength')">
+          Le numéro de téléphone doit avoir au moins 8 chiffres
+        </small>
+        <small class="text-danger inline-error d-block" *ngIf="addForm.get('phone')?.hasError('pattern')">
+          Seuls les chiffres sont autorisés
+        </small>
+      </div>
+
+      <div class="form-row">
+        <input type="password" formControlName="md" id="md" class="input-text" placeholder="Mot de passe">
+        <small class="text-danger inline-error d-block" *ngIf="addForm.get('md')?.hasError('required') && (addForm.get('md')?.dirty || addForm.get('md')?.touched)">
+          Le mot de passe est requis
+        </small>
+      </div>
+
+
+      <div class="form-row-last">
+        <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Submit</button>
+      </div>
+
+      <div class="mt-3">
+        <p class="mb-0 text-center" style="color: black;">Vous avez déjà un compte? <a routerLink="/seconnecter" class="fw-bold" style="color: rgb(250, 179, 14);">Se Connecter</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

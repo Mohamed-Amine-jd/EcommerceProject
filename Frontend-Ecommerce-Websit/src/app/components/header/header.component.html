@@ -1,0 +1,51 @@
+<section class="ftco-section">
+   <div class="wrap">
+       <div class="container">
+           <div class="row justify-content-between">
+               <div class="col">
+                   <p class="mb-0 phone" style="color: aliceblue;">+216 50541056</p>
+               </div>
+               <div class="col d-flex justify-content-end">
+                   <div class="social-media">
+                       <p class="mb-0 d-flex">
+                           <a href="#" class="d-flex align-items-center justify-content-center">
+                               <span class="fa fa-facebook"><i class="sr-only">Facebook</i></span>
+                           </a>
+                           <a href="#" class="d-flex align-items-center justify-content-center">
+                               <span class="fa fa-twitter"><i class="sr-only">Twitter</i></span>
+                           </a>
+                           <a href="#" class="d-flex align-items-center justify-content-center">
+                               <span class="fa fa-instagram"><i class="sr-only">Instagram</i></span>
+                           </a>
+                           <a href="#" class="d-flex align-items-center justify-content-center">
+                               <span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span>
+                           </a>
+                       </p>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+       <div class="container">
+           <a class="navbar-brand">
+               <img src="../../../assets/logo.png" width="130px" height="80px">
+           </a>
+         
+           <div class="collapse navbar-collapse" id="ftco-nav">
+               <ul class="navbar-nav m-auto">
+                   <li class="nav-item"><a routerLink="/produit" class="nav-link" style="border-color: #f1bc31;">Menu</a></li>
+                   <li class="nav-item"><a routerLink="/aboutus" class="nav-link">À propos de nous</a></li>
+                   <li class="nav-item"><a routerLink="/ajoutercontact" class="nav-link">Nous contacter</a></li>
+                   <li *ngIf="!phone && router.url !== '/seconnecter'" class="nav-item">
+                       <a routerLink="/seconnecter" class="nav-link">Se connecter</a>
+                   </li>
+                   <li class="nav-item" *ngIf="!phone && router.url === '/seconnecter'">
+                       <a routerLink="/sinscrire" class="nav-link">S'inscrire</a>
+                   </li>
+               </ul>
+           </div>
+       </div>
+   </nav>
+  
+</section>

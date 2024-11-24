@@ -1,0 +1,40 @@
+
+
+<app-header-admin></app-header-admin><br><br>
+<div class="container">
+  <h2 style="color: #0066FF; font-family: 'Arial Black', sans-serif;">Consulter les utilisateurs</h2><br>
+    <table class="table">
+        <thead>
+            <tr>
+              <th style="color: #8f5c10;">Nom</th>
+              <th style="color: #8f5c10;">Prénom</th>
+              <th style="color: #8f5c10;">Téléphone</th>
+              <th style="color: #8f5c10;">Adresse</th>
+              <th style="color: #8f5c10;">Signale</th>
+              <th style="color: #8f5c10;">Mot de passe</th>
+              <th style="color: #8f5c10;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td >{{ user.nom }}</td>
+            <td >{{ user.prenom }}</td>
+            <td >{{ user.phone }}</td>
+            <td >{{ user.adresse }}</td>
+            <td [ngStyle]="{ 'color': user.minus > 2 ? 'red' : 'inherit' }">{{ user.minus }}</td>
+            <td >{{ user.md }}</td>
+            <td>
+              <button (click)="deleteuser(user)" 
+             
+              [class.couleurFaible]="user.minus <= 2"
+              [class.couleurRouge]="user.minus > 2">
+        Archiver
+      </button>
+      
+            </td>
+        </tr>
+        
+        </tbody>
+    </table>
+  </div>
+

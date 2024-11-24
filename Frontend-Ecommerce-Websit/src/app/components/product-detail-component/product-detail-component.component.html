@@ -1,0 +1,73 @@
+<!-- Ajoutez ce lien dans la section <head> de votre fichier index.html pour inclure Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <app-header *ngIf="connect === 0"></app-header>
+  <app-header-user *ngIf="connect !== 0"></app-header-user>
+  
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-5 order-first">
+        <img [src]="prendrenomFile(produit.photo)" [alt]="produit.titre" class="img-fluid produit-image ">
+      </div>
+
+      <div class="col-md-7 produit-info">
+
+  <table class="text-center">
+    <tr>
+      <td><h2 class="produit-titre"><img [src]="prendrenomFile(produit.photo) " [alt]="produit.titre" style="width: 80px; height: 80px; border-radius: 25px; margin-right: 10px;">{{ produit.titre }}</h2>
+      </td>
+      <th></th>
+    </tr>
+
+    <tr>
+      
+      <td> <div class="info-label">
+        <i class="fa-solid fa-circle-dollar-to-slot"></i>Prix
+      </div>
+      <p>{{ produit.prix }} D</p>
+      </td>
+      <td><div class="info-label">
+        <i class="fa-regular fa-circle-question"></i> Déscription
+      </div>
+      <p>{{ produit.description }}</p>
+      </td>
+    </tr>
+   
+  
+   
+    <tr>
+     
+      <td> <div class="info-label">
+        <i class="fa-solid fa-layer-group"></i> Catégorie
+      </div>
+      <p>{{ produit.nomcateg }}</p>
+      </td>
+      <td> <div class="info-label">
+        <i class="fa-solid fa-mobile-screen-button"></i> Téléphone
+      </div>
+      <p>{{ produit.phoneprod }}</p>
+      </td>
+    </tr>
+
+  </table>
+  <br>
+  <br>
+  <br>
+  <div class="d-flex justify-content-center align-items-center">
+    <button class="btn btn-danger mt-3" (click)="signalerProduit(produit.id)" [disabled]="connect === 0">
+        <i class="fa-solid fa-triangle-exclamation"></i> Signaler
+    </button>
+</div>
+
+       
+      </div>
+    </div>
+  </div>
+  <br>
+  <p class="p" style="margin-left: 150px; ">
+    <img [src]="prendrenomFile(produit.photo) " [alt]="produit.titre" style="width: 90px; height: 90px; border-radius: 25px; margin-right: 30px;">
+    <img [src]="prendrenomFile(produit.photo) " [alt]="produit.titre" style="width: 90px; height: 90px; border-radius: 25px; margin-right: 30px;">
+    <img [src]="prendrenomFile(produit.photo) " [alt]="produit.titre" style="width: 90px; height: 90px; border-radius: 25px; margin-right: 30px;">
+     </p>

@@ -1,0 +1,32 @@
+<app-header-admin></app-header-admin><br><br>
+<div class="container">
+    <h2 style="color: #0066FF; font-family: 'Arial Black', sans-serif;">
+        Consulter les personnes effectuant le paiement</h2><br><br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Téléphone</th>
+                <th>Adresse</th>
+                <th>Action</th>
+         
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let payment of payments">
+                <td>{{ payment.nom }}</td>
+                <td>{{ payment.prenom }}</td>
+                <td>{{ payment.phoneuser }}</td>
+                <td>{{ payment.address }}</td>
+                
+                
+                 <td>
+                    <button  (click)="deletepay(payment)">Archiver</button>
+                  </td>
+               
+                
+            </tr>
+        </tbody>
+    </table>
+  </div>
